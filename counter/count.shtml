@@ -1,0 +1,10 @@
+<HTML>
+<HEAD>
+<title>アクセスカウンタのテスト</title>
+</HEAD>
+<BODY TEXT="purple" BGCOLOR="#99ff99">
+あなたは、
+<!--#include virtual="count.cgi" -->
+人目のご訪問者です。
+</BODY>
+</HTML>
