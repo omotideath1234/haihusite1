@@ -1,0 +1,869 @@
+@CHARSET "UTF-8";
+
+/****************************************
+
+		0. Reset
+
+*****************************************/
+html, body, div, span, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+abbr, address, cite, code,
+del, dfn, em, img, ins, kbd, q, samp,
+small, strong, sub, sup, var,
+b, i,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, figcaption, figure,
+footer, header, hgroup, menu, nav, section, summary,
+time, mark, audio, video {
+	margin:0;
+	padding:0;
+	border:0;
+	outline:0;
+	font-size:100%;
+	vertical-align:baseline;
+	background:transparent;
+}
+
+body {
+	line-height:1;
+}
+
+article,aside,details,figcaption,figure,
+footer,header,hgroup,menu,nav,section {
+	display:block;
+}
+
+nav ul {
+	list-style:none;
+}
+
+blockquote, q {
+	quotes:none;
+}
+
+blockquote:before, blockquote:after,
+q:before, q:after {
+	content:'';
+	content:none;
+}
+
+a {
+	margin:0;
+	padding:0;
+	font-size:100%;
+	vertical-align:baseline;
+	background:transparent;
+}
+
+ins {
+	background-color:#ff9;
+	color:#000;
+	text-decoration:none;
+}
+
+mark {
+	background-color:#ff9;
+	color:#000;
+	font-style:italic;
+	font-weight:bold;
+}
+
+del {
+	text-decoration: line-through;
+}
+
+abbr[title], dfn[title] {
+	border-bottom:1px dotted;
+	cursor:help;
+}
+
+table {
+	border-collapse:collapse;
+	border-spacing:0;
+}
+
+hr {
+	display:block;
+	height:1px;
+	border:0;
+	border-top:1px solid #cccccc;
+	margin:1em 0;
+	padding:0;
+}
+
+input, select {
+	vertical-align:middle;
+}
+
+button {
+	cursor:pointer;
+	cursor: hand;
+	border: 1px #000000 solid;
+	border-radius: 10px;
+	box-shadow: 1px 1px 5px #000000;
+}
+
+/****************************************
+
+		1. Typography & Colors
+
+*****************************************/
+body {
+	font: 14px/1.5 ArialMT, "Hiragino Kaku Gothic ProN", "ヒラギノ角ゴ ProN W3", メイリオ, sans-serif;
+	color: #000;
+	padding: 0;
+	margin: 0;
+	}
+
+input, textarea, button {
+	font: 14px/1.5 ArialMT, "Hiragino Kaku Gothic ProN", "ヒラギノ角ゴ ProN W3", メイリオ, sans-serif;
+	}
+
+h1 { font-size: 14px; }
+
+h2 { font-size: 14px; }
+
+aside { font-size: 12px; }
+
+/****************************************
+
+		2. Main Style
+
+*****************************************/
+/**
+ * link
+ */
+
+
+a:link {
+	color: #0066CC;
+}
+
+a:visited {
+	color: #0099FF;
+}
+
+
+a {
+/*	color: #66cccc; */
+	text-decoration: none;
+}
+a#headerHref {
+	color: #ffffff;
+	text-decoration: none;
+}
+	a:hover { color: #119186; }
+
+a#fontLink{
+	color: #FFFFFF;
+	text-decoration: none;
+}
+	a#fontLink:hover { color: #119186; }
+
+
+/**
+ * list
+ */
+ul {
+	list-style:none;
+}
+
+/**
+ * contentBox
+ */
+.contentBox {
+	/*background-color: #fff;*/
+	border: 0;
+	display: block;
+	margin: 5px 0;
+	padding: 0 5px;
+}
+	/**
+	 * mainArea
+	 */
+	.contentBox.mainArea {
+		background-color: #ffffcc;
+		border: 1px #000 solid;
+		padding: 5px;
+	}
+    .profileArea {
+	    /*background-color: #fff;*/
+	    border: 0;
+	    display: block;
+	    margin: 5px auto;
+	    padding: 0 5px;
+	    width: 300px;
+    }
+    .contentBox.profileArea {
+	    /*background-color: #fff;*/
+	    border: 0;
+	    display: block;
+	    margin: 0 auto;
+	    padding: 0px;
+    }
+
+	/**
+	 * errorArea
+	 */
+	.errorBox {
+	    width:300px;
+	    margin:0 auto;
+	}
+	.contentBox.errorArea {
+		border: 1px #ff0000 solid;
+		padding: 5px 5px 5px 5px;
+		min-height: 50px;
+		text-align: left;
+	}
+    #errorMessage {
+        width:50px;
+        height:50px;
+        margin:5px;
+        float:left;
+        text-align:left;
+    }
+
+/**
+ * boxLink
+ */
+.boxLink {
+	display: block;
+	cursor: pointer;
+	color: #FFFFFF;
+}
+
+/**
+ * select
+ */
+select {
+	height: 30px;
+}
+
+/**
+ * font-size
+ */
+.smallFont {
+	font-size: 12px;
+}
+.largeFont {
+	font-size: 16px;
+}
+
+/**
+ * clearfix
+ */
+.clearfix:after {
+	content: ".";
+	display: block;
+	clear: both;
+	height: 0;
+	visibility: hidden;
+	}
+
+.clearfix {
+	min-height: 1px;
+	}
+
+* html .clearfix {
+	height: 1px;
+	}
+
+.clear {
+	clear: both;
+	}
+
+
+/****************************************
+
+		3. Layout
+
+*****************************************/
+html {
+	height: 100%;
+	-webkit-text-size-adjust: none;
+}
+
+body { height: 100%; }
+
+#container {
+	width: 100%;
+	position: relative;
+	height: 100%;
+	min-height: 100%;
+/* @todo */
+	overflow: hidden;
+}
+body > #container {
+	height: auto;
+}
+	#container > header {
+		width: 100%;
+		height: 40px;
+		margin: 0 auto;
+		background-image:url(../../image/sp/640/status_7_a_640.png);
+		background-repeat:repeat;
+	}
+
+	#container > footer {
+		width: 100%;
+		/*height: 86px;*/
+		margin: 5px 0 0;
+		text-align: center;
+		border-top: solid 1px #333;
+
+		-webkit-box-shadow: 0 -1px 5px #ccc;
+		   -moz-box-shadow: 0 -1px 5px #ccc;
+		        box-shadow: 0 -1px 5px #ccc;
+
+		position: absolute;
+		bottom: 0;
+		left: 0;
+		clear: both;
+	}
+
+#content {
+	margin: 0px 5px 0;
+	padding-bottom: 120px;
+}
+
+.obiSubtitle {
+	width: 300px;
+	vertical-align: top;
+}
+
+/****************************************
+
+		4. header
+
+*****************************************/
+#container > header {
+	position: relative;
+	}
+
+#container > header > h1 {
+	text-align: center;
+	height: 30px;
+	line-height: 30px;
+	padding: 5px;
+	}
+
+#container > header ul.left {
+	position:absolute;
+	top: 0;
+	left: 0;
+}
+
+#container > header ul.right {
+	position:absolute;
+	top: 0;
+	right: 0;
+}
+
+#container > header li {
+	float: left;
+	height: 30px;
+	line-height: 30px;
+	margin: 5px;
+}
+
+#container > header li#bar {
+   width: 1px;
+   height: 30px;
+   background-color: #FFFFFF;
+}
+
+/****************************************
+
+		5. footer
+
+*****************************************/
+#container > footer p {
+	height: 30px;
+	line-height: 30px;
+	padding: 5px;
+	text-align: center;
+}
+#footerothermenu{
+	width:300px;
+	float:center;
+	margin:0px auto;
+	background:#9966ff;
+	height:150px;
+	clear:both;
+}
+#footerothermenu img.buttonImage{
+	height:40px;
+	width:88px;
+}
+#footerothermenu div.buttonLabel{
+	color:#ffffff;
+}
+#footerothermenu div.buttonArea{
+	float:left;
+	width:100%;
+}
+#footerothermenu div.textlinkarea{
+	float:left;
+	width:100%;
+}
+#footerothermenu a:visited,#footerothermenu a:link,#footerothermenu span.link{
+	color:#FFFFFF;
+}
+#footerothermenu a:hover{
+	color:#FFFFFF;
+}
+/**
+ * profile_others
+ */
+#rewardmenu > div,
+#friendmenu > div{
+	overflow: hidden;
+}
+#rewardmenu,
+#friendmenu{
+	width: 300px;
+	float: center;
+	margin: 0px auto;
+	padding-bottom:3px;
+}
+#rewardmenu{ background: #B9F023; }
+#friendmenu{ background: #99ddcc; }
+
+#friendMenu, #friendMenu .buttonArea { padding: 0; }
+/*#friendMenu li { padding: 0 5px 0 0; }*/
+#friendMenu li { padding: 5px 1px 5px 2px; }
+#friendMenu li:last-child { padding-right: 0; }
+
+#friendMenu li.icon {
+	float: left;
+	width: 85px;
+	margin-left: 3px;
+}
+
+#friendMenu li.score {
+	float: none;
+	padding-left: 180px;
+}
+
+#friendmenu h2{
+	text-align:center;
+	color:#FFFFFF;
+	background: #336698;
+}
+#friendmenu button.bunkatsu_3{
+	color:#FFFFFF;
+	background: -webkit-gradient(linear,left top,left bottom,from(#336699),to(#003366));
+	float:left;
+	position:relative;
+	margin:6px;
+}
+
+#friendMenu .subtitleFriend{
+    padding: 0px;
+    text-align: center;
+    background-color: #00CDCD;
+    width: 300px;
+    margin: 0px 0px;
+}
+#friendMenu .InfoArea{
+    background: #ccf7fe;
+    width: 280px;
+    margin: 0px 0px 10px 0px;
+    padding: 10px;
+}
+
+#rewardmenu .lableArea{ top: 12px; }
+#friendmenu .lableArea{ top: 10px; }
+
+/* フッターマイメニュー */
+div.button_area{
+	float:center;
+	width:300px;
+	margin:3px auto;
+}
+div.bunkatsu_3{
+/*	width:30%; */
+/*	margin-left: 7px; */
+	float:left;
+	position:relative;
+	margin:6px;
+}
+img.bunkatsu_3{
+	height:40px;
+	width:88px;
+}
+
+/****************************************
+
+		7. Button
+
+*****************************************/
+.buttonArea {
+	text-align: center;
+	padding: 0px 0;
+}
+	.buttonArea.rightButton { text-align: right; }
+	.buttonArea.leftButton  { text-align: left; }
+
+	.buttonArea ul.buttonList > li {
+		float: left;
+		padding: 5px 0;
+	}
+	.button {
+		color: #ffffff;
+		font-size: 12px;
+		cursor: pointer;
+		display: block;
+		text-align: center;
+		-webkit-border-radius: 8px;
+		-moz-border-radius: 8px;
+		-ms-border-radius: 8px;
+		border-radius: 8px;
+		overflow: hidden;
+	}
+	a.button{color: #ffffff;}
+	a.button:hover{color: #ffffff;}
+	a.button:visited{color: #ffffff;}
+
+	.button > img{
+		display: block;
+	}
+	.full {
+		display: block;
+		width: 100%;
+	}
+		.full > button {
+			width: 100%;
+		}
+		.full > aside {
+			text-align: left;
+			margin: 0;
+			padding: 0 5px;
+		}
+	.half {
+		display: inline-block;
+		width: 50%;
+	}
+		li.half:nth-child(2n)   { text-align: right; }
+		li.half:nth-child(2n+1) { text-align: left; }
+		.half > button {
+			width: 95%;
+		}
+	.oneThird {
+	    display: inline-block;
+		width: 33%;
+	}
+
+	.imghalf {
+	    text-align: center;
+	    padding: auto;
+		display: inline-block;
+		width: 50%;
+	}
+		li.imghalf:nth-child(2n)   { text-align: left; }
+		li.imghalf:nth-child(2n+1) { text-align: right; }
+		.imghalf > button {
+			width: 95%;
+		}
+
+
+/**
+ * tags
+ */
+.tags{
+	margin:0;
+	padding:0;
+	position:absolute;
+	top: 0;
+	left: 0;
+	list-style:none;
+	}
+
+.tags li, .tags a{
+	float:left;
+	height:30px;
+	line-height:30px;
+	position:relative;
+	font-size: 12px;
+	font-weight: bold;
+	background: -webkit-gradient(linear, left top, left bottom, from(#f5f5f5), to(#ccc));
+	}
+
+	.tags li.imageArea, .tags .imageArea a{ background: #fff; }
+
+.tags a{
+	margin-left:10px;
+	padding:0 10px 0 5px;
+	color:#000;
+	text-decoration:none;
+	}
+
+	.tags .imageArea a{
+		margin: 0;
+		padding: 0;
+		}
+
+.tags a:before{
+	content:"";
+	float:left;
+	position:absolute;
+	top:0;
+	left:-10px;
+	width:0;
+	height:0;
+	border-color:#fff transparent #fff #fff;
+	border-style:solid;
+	border-width:15px 10px 15px 0;
+	}
+
+
+/**
+ * pager
+ */
+#pager { text-align: center; }
+
+#pager button {
+		width: 90%;
+		}
+
+
+div.buttonParentArea{
+	margin:5px auto;
+	position:relative;
+	cursor:pointer;
+	cursor:hand;
+}
+img.buttonImage{
+	width:100%;
+	height:40px;
+}
+div.lableArea{
+	position:absolute;
+	margin:0 auto;
+	width:100%;
+	text-align:center;
+}
+
+/****************************************
+
+		8. Images
+
+*****************************************/
+
+/**
+ * newsThumbList
+ */
+.newsThumbList {
+	background-color: #ffffff;
+	padding: 5px;
+	margin: 5px;
+	}
+.newsThumbList > li > * {
+	text-align: left;
+	margin-left: 55px;
+	}
+.newsThumbList > li > img {
+	float: left;
+	width: 50px;
+	height: 50px;
+	margin-left: 0;
+	}
+
+/**
+ * festivalThumbList
+ */
+.festivalThumbList > li { position: relative; }
+
+.festivalThumbList > li > * {
+	text-align: left;
+	margin-left: 75px;
+	}
+
+.festivalThumbList > li img.thumbImg {
+	position: absolute;
+	top: 5px;
+	left: 3px;
+	float: left;
+	width: 70px;
+	height: 70px;
+	margin-left: 0;
+	border-radius: 10px;
+/*	border: 1px solid #000000; */
+	}
+
+/**
+ * festivalRankThumbList
+ */
+.festivalRankThumbList > li > * {
+	text-align: left;
+	margin-left: 140px;
+	}
+.festivalRankThumbList > li > img {
+	float: left;
+	width: 70px;
+	height: 70px;
+	margin-left: 0;
+	}
+
+/**
+ * playerThumbList
+ */
+.playerThumbList > li > * {
+	text-align: left;
+	float: left;
+	margin-left: 72px;
+	}
+
+.playerThumbList > li > img {
+	width: 70px;
+	height: 70px;
+	position: absolute;
+	margin: 0px;
+	left: 10px;
+	}
+
+.playerThumbList .detail > img {
+	width: 32px;
+	height: 32px;
+    float: left;
+	margin-right: -32px;
+	}
+
+.playerThumbList .detail > p{
+	margin: 0 0 0 40px;
+	}
+
+.vbottom {
+    vertical-align:bottom;
+}
+
+h2.subtitleMypage {
+	padding-top:5px;
+	height:25px;
+	text-align:center;
+	background:#ff5333;
+	color:#ffffff;
+	text-shadow:
+		-1px -1px 1px #aa0000,
+		1px -1px 1px #aa0000,
+		-1px 1px 1px #aa0000,
+		1px 1px 1px #aa0000;
+}
+/****************************************
+
+		9. Dialog
+
+*****************************************/
+
+#dialog {
+	text-align: left;
+}
+	#dialog > .buttonArea {
+		margin-top: 10px;
+	}
+	#dialog .button {
+		width: 180px;
+	}
+	#dialog .cancel {
+		margin-top: 20px;
+	}
+	#dialog > .errorArea {
+		font-size: 14px;
+	}
+
+.ui-dialog .ui-dialog-titlebar { display: none;  }
+
+
+/****************************************
+
+		10. Donchare
+
+*****************************************/
+
+div.donchare{
+	clear:both;
+	position:relative;
+	margin:0 auto;
+	width:280px;
+}
+img.donchareImage{
+	height:40px;
+	width:280px;
+}
+div.buttonLabel{
+	color:#ffffff;
+	font-size:12px;
+	cursor: pointer;
+}
+div.shadowLabel{
+	text-shadow: 1px 1px 1px #000000;
+}
+
+/****************************************
+
+		12. Button
+
+*****************************************/
+
+button.bunkatsu_2{
+	width:40%;
+	margin:3% 5% 0%;
+}
+
+div.bunkatsu_2{
+	width:40%;
+	margin:3% 5% 0%;
+	float:left;
+	position:relative;
+}
+img.bunkatsu_2{
+	height:40px;
+	width:100%;
+}
+
+/****************************************
+
+		13. etc
+
+*****************************************/
+img.radius_image {
+	-webkit-border-radius: 10px;
+	   -moz-border-radius: 10px;
+	    -ms-border-radius: 10px;
+	border-radius: 10px;
+}
+div.shinText{
+	font-weight:bold;
+	background-color:#7F7F7F;
+	color:#FFFFFF;
+	margin:auto auto;
+	width:52px;
+	text-align:center;
+	border : 1px solid #000000
+}
+
+/****************************************
+
+		14. TotalPanel
+
+*****************************************/
+.token_info_display{
+	color:#000;
+	font-weight: bold;
+}
+.total_panel_display { 
+	color:#fff;
+	font-weight: bold;
+}
+
+.total_panel_crown_display{
+	color:#000;
+	font-weight: bold;
+}
+
+.mydon_area{
+	display:flex;
+	flex-direction:column;
+}

@@ -1,0 +1,106 @@
+/**
+ * common.js
+ */
+jQuery(function($){
+	$("body").bind("ajaxSend", function(c,xhr){
+		$( window ).bind( 'beforeunload', function() {
+			xhr.abort();
+		});
+	});
+	// Ajax終了3秒後にフォームを再送信できるようにフラグを落とす
+	$("body").bind("ajaxComplete", function(c,xhr){
+		setTimeout("$.fn.setFormSubmitFlag(false)", 3000);
+	});
+
+	/*
+	 * buttonImage
+	 */
+	$('.button').each(function(){
+		var obj = $(this);
+		     if( obj.hasClass( 'purple' ) ){ var src = 'image/sp/640/btn_p_04_640.png'; }
+		else if( obj.hasClass( 'red'    ) ){ var src = 'image/sp/640/btn_r_02_640.png'; }
+		else if( obj.hasClass( 'blue'   ) ){ var src = 'image/sp/640/btn_b_01_640.png'; }
+		else if( obj.hasClass( 'green'  ) ){ var src = 'image/sp/640/btn_g_01_640.png'; }
+		else {return;}
+		var btn_h  = obj.height();
+		var btn_w  = obj.width();
+		obj.css({
+			'display':'block',
+			'overflow' : 'hidden'
+		});
+		obj.wrapInner('<span></span>');
+		obj.prepend('<img />');
+		obj.children('img').attr('src',src).css({
+			'height' : btn_h + 'px',
+			'width'  : btn_w + 'px'
+		});
+		obj.children('span').css({
+			'position'    : 'relative',
+			'top'         : '-' + btn_h + 'px',
+			'line-height' : btn_h + 'px'
+		});
+	});
+});
+
+(function($){
+	/**
+	 * formSubmitFlag
+	 */
+	var formSubmitFlag = false;
+	$.fn.setFormSubmitFlag = function(flag){
+		formSubmitFlag = flag;
+	};
+	$.fn.getFormSubmitFlag = function(){
+		return formSubmitFlag;
+	};
+
+	/**
+	 * formSubmit
+	 */
+	$.fn.formSubmit = function(submitFunction){
+		$( this ).submit( function(){
+			if ($.fn.getFormSubmitFlag() == false) {
+				$.fn.setFormSubmitFlag(true);
+				submitFunction.call($( this ));
+			};
+			return false;
+		});
+	};
+
+	/**
+	 * formConfirm
+	 */
+	$.fn.formConfirm = function(message, title, submitFunction){
+		$( this ).submit( function(){
+			if ($.fn.getFormSubmitFlag() == false) {
+				$.fn.setFormSubmitFlag(true);
+				jConfirm(
+					message,
+					title,
+					jConfirmCallback($( this ), submitFunction)
+				);
+			};
+			return false;
+		});
+
+		function jConfirmCallback(form, submitFunction){
+			return function(r) {
+				if(r == true){
+					submitFunction.call(form);
+				}else{
+					$.fn.setFormSubmitFlag(false);
+				};
+			};
+		};
+	};
+
+	/**
+	 * boxAnchor
+	 */
+	$.fn.boxAnchor = function(){
+		$( this ).click(function(){
+			window.location=$(this).find('a').attr('href');
+			return false;
+		});
+	};
+})(jQuery);

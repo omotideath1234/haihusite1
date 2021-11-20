@@ -1,0 +1,124 @@
+(function($){
+	/**
+	 * プレイヤー情報の更新
+	 */
+	$.fn.UpdatePlayer = function(){
+		$( this ).click(function(){
+			if(confirm("更新しますか？")){
+				var _tckt = $( '#content' ).find('#_tckt').val();
+				
+				var postdata = {_tckt:_tckt};	// 半角'&''?'対策
+				
+				$.ajax({
+						 type: "POST"
+						,url: "ajax/update_player.php"// 呼び先のURL(プログラムからの相対パスでOK)
+						,async: false						// true:非同期、false:同期
+						,cache: false
+						,data: postdata
+						,dataType: "json"
+						,timeout : 3000						// msecで指定。3000 = 3秒。
+						,error: function (XMLHttpRequest, textStatus, errorThrown){		// error時に呼ばれる処理
+							alert("通信に失敗しました。");
+						}
+						,success: function (data, dataType){	// success時に呼ばれる処理
+							if(data.result == 0){
+								alert("更新しました。");
+								location.href = data.back_url;
+							}else if(data.result == 705){
+								alert( '更新に失敗しました。\n再度画面の読み込みを行ってください。' );
+							}else if(data.result == 901){
+								alert( '現在メンテナンス中です。\nしばらくお待ちください。' );
+								return FALSE;
+							}else{
+								alert("失敗しました。");
+								return FALSE;
+							}
+						}
+				}).responseText;
+			}
+		});
+	};
+
+	/**
+	 * スコア情報の更新
+	 */
+	$.fn.UpdateScore = function(){
+		$( this ).click(function(){
+			if(confirm("更新しますか？")){
+				var _tckt = $( '#content' ).find('#_tckt').val();
+				
+				var postdata = {_tckt:_tckt};	// 半角'&''?'対策
+				
+				$.ajax({
+						 type: "POST"
+						,url: "ajax/update_score.php"// 呼び先のURL(プログラムからの相対パスでOK)
+						,async: false						// true:非同期、false:同期
+						,cache: false
+						,data: postdata
+						,dataType: "json"
+						,timeout : 10000						// msecで指定。10000 = 10秒。
+						,error: function (XMLHttpRequest, textStatus, errorThrown){		// error時に呼ばれる処理
+							alert("通信に失敗しました。");
+						}
+						,success: function (data, dataType){	// success時に呼ばれる処理
+							if(data.result == 0){
+								alert("更新しました。");
+								location.href = data.back_url;
+							}else if(data.result == 705){
+								alert( '更新に失敗しました。\n再度画面の読み込みを行ってください。' );
+							}else if(data.result == 901){
+								alert( '現在メンテナンス中です。\nしばらくお待ちください。' );
+								return FALSE;
+							}else{
+								alert("失敗しました。");
+								return FALSE;
+							}
+						}
+				}).responseText;
+			}
+		});
+	};
+
+	/**
+	 * 挑戦情報の更新
+	 */
+	$.fn.UpdateBattle = function(){
+		$( this ).click(function(){
+			if(confirm("更新しますか？")){
+				var _tckt = $( '#content' ).find('#_tckt').val();
+				
+				var postdata = {_tckt:_tckt};	// 半角'&''?'対策
+				
+				$.ajax({
+						 type: "POST"
+						,url: "ajax/update_score.php"// 呼び先のURL(プログラムからの相対パスでOK)
+						,async: false						// true:非同期、false:同期
+						,cache: false
+						,data: postdata
+						,dataType: "json"
+						,timeout : 3000						// msecで指定。3000 = 3秒。
+						,error: function (XMLHttpRequest, textStatus, errorThrown){		// error時に呼ばれる処理
+							alert("通信に失敗しました。");
+						}
+						,success: function (data, dataType){	// success時に呼ばれる処理
+							if(data.result == 0){
+								alert("更新しました。");
+								location.href = data.back_url;
+							}else if(data.result == 705){
+								alert( '更新に失敗しました。\n再度画面の読み込みを行ってください。' );
+							}else if(data.result == 901){
+								alert( '現在メンテナンス中です。\nしばらくお待ちください。' );
+								return FALSE;
+							}else{
+								alert("失敗しました。");
+								return FALSE;
+							}
+						}
+				}).responseText;
+			}
+		});
+	};
+
+
+})(jQuery);
+

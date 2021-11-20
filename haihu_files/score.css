@@ -1,0 +1,932 @@
+@CHARSET "UTF-8";
+
+/****************************************
+
+		1. Layout
+
+*****************************************/
+.contentBox.songLisrArea {
+	background-color: #a9a9a9;
+	/*border: 2px solid #FFBF98;*/
+	border: 2px solid rgba(182,182,182,0.5);
+	-webkit-box-shadow: 3px 2px 1px #878787, -3px -2px 1px #cfcfcf;
+	-moz-box-shadow: 3px 2px 1px #878787, -3px -2px 1px #cfcfcf;
+	box-shadow: 3px 2px 2px 2px #878787, -3px -2px 2px 2px #cfcfcf;
+}
+.songNameFont {
+	font-weight: bold;
+	color: #ffffff;
+	text-shadow:
+	-2px -2px 2px #878787,
+	2px -2px 2px #878787,
+	-2px 2px 2px #878787,
+	2px 2px 2px #878787;
+}
+
+/* J-POP */
+.contentBox.songLisrAreajpop {
+	background-color: #21A1BA;
+	/*border: 2px solid #FFBF98;*/
+	border: 2px solid rgba(152,211,222,0.5);
+	-webkit-box-shadow: 3px 2px 1px #0C6473, -3px -2px 1px #7DC5D4;
+	-moz-box-shadow: 3px 2px 1px #0C6473, -3px -2px 1px #7DC5D4;
+	box-shadow: 3px 2px 2px 2px #0C6473, -3px -2px 2px 2px #7DC5D4;
+}
+.songNameFontjpop {
+	font-weight: bold;
+	color: #ffffff;
+	text-shadow:
+	-2px -2px 2px #0C6473,
+	2px -2px 2px #0C6473,
+	-2px 2px 2px #0C6473,
+	2px 2px 2px #0C6473;
+}
+/* anime */
+.contentBox.songLisrAreaanime {
+	background-color: #FF5386;
+	/*border: 2px solid #FFBF98;*/
+	border: 2px solid rgba(255,191,209,0.5);
+	-webkit-box-shadow: 3px 2px 1px #BA1057, -3px -2px 1px #FFB8CC;
+	-moz-box-shadow: 3px 2px 1px #BA1057, -3px -2px 1px #FFB8CC;
+	box-shadow: 3px 2px 2px 2px #BA1057, -3px -2px 2px 2px #FFB8CC;
+}
+.songNameFontanime {
+	font-weight: bold;
+	color: #ffffff;
+	text-shadow:
+	-2px -2px 2px #BA1057,
+	2px -2px 2px #BA1057,
+	-2px 2px 2px #BA1057,
+	2px 2px 2px #BA1057;
+}
+/* anime */
+.contentBox.songLisrAreakids {
+	background-color: #FF9900;
+	/*border: 2px solid #FFBF98;*/
+	border: 2px solid rgba(255,221,159,0.5);
+	-webkit-box-shadow: 3px 2px 1px #E65300, -3px -2px 1px #FFDA8F;
+	-moz-box-shadow: 3px 2px 1px #E65300, -3px -2px 1px #FFDA8F;
+	box-shadow: 3px 2px 2px 2px #E65300, -3px -2px 2px 2px #FFDA8F;
+}
+.songNameFontkids {
+	font-weight: bold;
+	color: #ffffff;
+	text-shadow:
+	-2px -2px 2px #E65300,
+	2px -2px 2px #E65300,
+	-2px 2px 2px #E65300,
+	2px 2px 2px #E65300;
+}
+
+/* variety */
+.contentBox.songLisrAreavariety {
+	background-color: #8FD41F;
+	/*border: 2px solid #FFBF98;*/
+	border: 2px solid rgba(220,234,176,0.5);
+	-webkit-box-shadow: 3px 2px 1px #5A7A0B, -3px -2px 1px #CEE191;
+	-moz-box-shadow: 3px 2px 1px #5A7A0B, -3px -2px 1px #CEE191;
+	box-shadow: 3px 2px 2px 2px #5A7A0B, -3px -2px 2px 2px #CEE191;
+}
+.songNameFontvariety {
+	font-weight: bold;
+	color: #ffffff;
+	text-shadow:
+	-2px -2px 2px #5A7A0B,
+	2px -2px 2px #5A7A0B,
+	-2px 2px 2px #5A7A0B,
+	2px 2px 2px #5A7A0B;
+}
+/* classic */
+.contentBox.songLisrAreaclassic {
+	background-color: #D1A314;
+	/*border: 2px solid #FFBF98;*/
+	border: 2px solid rgba(236,215,139,0.5);
+	-webkit-box-shadow: 3px 2px 1px #996900, -3px -2px 1px #E8CF6B;
+	-moz-box-shadow: 3px 2px 1px #996900, -3px -2px 1px #E8CF6B;
+	box-shadow: 3px 2px 2px 2px #996900, -3px -2px 2px 2px #E8CF6B;
+}
+.songNameFontclassic {
+	font-weight: bold;
+	color: #ffffff;
+	text-shadow:
+	-2px -2px 2px #996900,
+	2px -2px 2px #996900,
+	-2px 2px 2px #996900,
+	2px 2px 2px #996900;
+}
+/* game */
+.contentBox.songLisrAreagame {
+	background-color: #9D76BF;
+	/*border: 2px solid #FFBF98;*/
+	border: 2px solid rgba(205,184,218,0.5);
+	-webkit-box-shadow: 3px 2px 1px #603E7E, -3px -2px 1px #BEA3CC;
+	-moz-box-shadow: 3px 2px 1px #603E7E, -3px -2px 1px #BEA3CC;
+	box-shadow: 3px 2px 2px 2px #603E7E, -3px -2px 2px 2px #BEA3CC;
+}
+.songNameFontgame {
+	font-weight: bold;
+	color: #ffffff;
+	text-shadow:
+	-2px -2px 2px #603E7E,
+	2px -2px 2px #603E7E,
+	-2px 2px 2px #603E7E,
+	2px 2px 2px #603E7E;
+}
+/* namco */
+.contentBox.songLisrAreanamco {
+	background-color: #FF5B14;
+	/*border: 2px solid #FFBF98;*/
+	border: 2px solid rgba(255,190,151,0.5);
+	-webkit-box-shadow: 3px 2px 1px #B22F00, -3px -2px 1px #FFA46D;
+	-moz-box-shadow: 3px 2px 1px #B22F00, -3px -2px 1px #FFA46D;
+	box-shadow: 3px 2px 2px 2px #B22F00, -3px -2px 2px 2px #FFA46D;
+}
+.songNameFontnamco {
+	font-weight: bold;
+	color: #ffffff;
+	text-shadow:
+	-2px -2px 2px #B22F00,
+	2px -2px 2px #B22F00,
+	-2px 2px 2px #B22F00,
+	2px 2px 2px #B22F00;
+}
+/* vocaloid */
+.contentBox.songLisrAreavocaloid {
+	background-color: #ABB4BF;
+	border: 2px solid rgba(209,218,230,0.5);
+	-webkit-box-shadow: 3px 2px 1px #6B7B8E, -3px -2px 1px #EEEEEE;
+	-moz-box-shadow: 3px 2px 1px #6B7B8E, -3px -2px 1px #EEEEEE;
+	box-shadow: 3px 2px 2px 2px #6B7B8E, -3px -2px 2px 2px #EEEEEE;
+}
+.songNameFontvocaloid {
+	font-weight: bold;
+	color: #ffffff;
+	text-shadow:
+	-2px -2px 2px #6B7B8E,
+	2px -2px 2px #6B7B8E,
+	-2px 2px 2px #6B7B8E,
+	2px 2px 2px #6B7B8E;
+}
+
+/****************************************
+
+		2. Style
+
+*****************************************/
+/**
+ * score_detail
+ */
+#playerName, #searchString { text-align: center; }
+
+#playerScore .difficulty {
+	padding-left: 10px;
+	float: left;
+}
+
+/* J-POP */
+.songNameBoxjpop {
+    background-image:url(../../image/sp/640/song_panel_jpop_middle_640.png);
+    background-repeat:repeat-y;
+    width:280px;
+    padding:10px;
+    vertical-align:bottom;
+    /*text-align:center;*/
+    float:left;
+}
+
+/* anime */
+.songNameBoxanime {
+    background-image:url(../../image/sp/640/song_panel_anime_middle_640.png);
+    background-repeat:repeat-y;
+    width:280px;
+    padding:10px;
+    vertical-align:bottom;
+    /*text-align:center;*/
+    float:left;
+}
+
+/* kids */
+.songNameBoxkids {
+    background-image:url(../../image/sp/640/song_panel_kids_middle_640.png);
+    background-repeat:repeat-y;
+    width:280px;
+    padding:10px;
+    vertical-align:bottom;
+    /*text-align:center;*/
+    float:left;
+}
+
+/* variety */
+.songNameBoxvariety {
+    background-image:url(../../image/sp/640/song_panel_variety_middle_640.png);
+    background-repeat:repeat-y;
+    width:280px;
+    padding:10px;
+    vertical-align:bottom;
+    /*text-align:center;*/
+    float:left;
+}
+
+/* classic */
+.songNameBoxclassic {
+    background-image:url(../../image/sp/640/song_panel_classic_middle_640.png);
+    background-repeat:repeat-y;
+    width:280px;
+    padding:10px;
+    vertical-align:bottom;
+    /*text-align:center;*/
+    float:left;
+}
+
+/* game */
+.songNameBoxgame {
+    background-image:url(../../image/sp/640/song_panel_game_middle_640.png);
+    background-repeat:repeat-y;
+    width:280px;
+    padding:10px;
+    vertical-align:bottom;
+    /*text-align:center;*/
+    float:left;
+}
+
+/* namco */
+.songNameBoxnamco {
+    background-image:url(../../image/sp/640/song_panel_namco_middle_640.png);
+    background-repeat:repeat-y;
+    width:280px;
+    padding:10px;
+    vertical-align:bottom;
+    /*text-align:center;*/
+    float:left;
+}
+
+/* vocaloid */
+.songNameBoxvocaloid {
+    background-image:url(../../image/sp/640/song_panel_vocaloid_middle_640.png);
+    background-repeat:repeat-y;
+    width:280px;
+    padding:10px;
+    vertical-align:bottom;
+    /*text-align:center;*/
+    float:left;
+}
+
+/****************************************
+
+
+
+*****************************************/
+.buttonArea {
+	text-align: center;
+	padding: 0;
+}
+
+#tabList{
+    padding: 0;
+    margin: 15px;
+}
+
+#tabList > li {
+	float: left;
+	padding: 0;
+}
+
+#tabList > li > * > img {
+	vertical-align:bottom;
+	padding:2px;
+	width: 130px;
+	height: 29px;
+}
+/*************************/
+
+.songBoxStyle {
+    margin:0 auto;
+    width:300px;
+}
+
+.songBoxBottom {
+    margin:0;
+    padding:0;
+}
+
+.songBoxBottomImg {
+    vertical-align:top;
+}
+
+.songNameTable {
+    display: table-cell;
+    vertical-align:middle;
+    width:35px;
+}
+
+.songNameTitle {
+    display: table-cell;
+    vertical-align:middle;
+    width:240px;
+    text-align:center;
+}
+
+.songNameTitleScore {
+    display: table-cell;
+    vertical-align:middle;
+    width:280px;
+    text-align:center;
+}
+
+.vbottom {
+    vertical-align:bottom;
+}
+
+.detail {
+	width: 100%;
+	padding: 5px;
+	float: left;
+}
+	.detail dt {
+		display: inline-block;
+		width: 40%;
+	}
+	.detail dd {
+		display: inline-block;
+		width: 50%;
+	}
+
+.scoreArea{
+    text-align: center;
+    position: relative;
+    margin: 0;
+    padding: 0;
+}
+
+.scoreSongNameArea{
+    text-align: center;
+    position: relative;
+    margin: 0 auto;
+    padding: 0;
+    width: 300px;
+}
+
+.playDataArea{
+    text-align: right;
+    position: relative;
+    margin: 0;
+    padding: 0;
+}
+#recentScoreList .playDataArea.option,
+#recentScoreList .shin_icon{
+	height:25px;
+}
+#recentScoreList .playDataArea.option{
+	width:25px;
+	margin:0;
+	padding:1px;
+	float:left;
+}
+#recentScoreList .playDataArea.option > img{
+	width: 100%;
+	height: 100%;
+}
+#recentScoreList .shin_icon{
+	float: right;
+}
+
+#favorite {
+	width: 100%;
+}
+	#favorite > .button {
+		width: 95%;
+	}
+
+/**
+ * rank_detail
+ */
+.ranking{
+	width: 100%;
+}
+.ranking dt {
+	width: 21%;
+	float: left;
+	text-align: right;
+	padding-right: 10%;
+}
+.ranking dd {
+	width: 34%;
+	float: left;
+}
+
+.buttonArea.rankButton li {
+	width: auto;
+	margin: auto 33px;
+}
+
+.rankButton button {
+	width: 49%;
+}
+
+.buttonArea.rankButton li.arrow {
+	width: 33px;
+	margin: auto;
+}
+	.arrow button {
+		width: 40px;
+	}
+
+.right { float: right; }
+.left { float: left; }
+
+.rankingDetailArea {
+	width: 100%;
+	background: #FFCC00;
+	display: block;
+	padding: 5px 0px;
+	border: 1px #000 solid;
+}
+.rankingDetailArea > li{
+	margin: 10px 5px;
+}
+.rankingDetailChild{
+	display: block;
+	height: 70px;
+	position: relative;
+	background: #FFFFCC;
+	margin: 10px 0px 0px 0px;
+}
+.rankingDetailChild > *{
+	float: left;
+}
+.rankingDetailRank{
+	width: 45px;
+}
+.rankingDetailRank > span,
+.rankingDetailScore > span{
+	font-weight: bold;
+}
+.rankingDetailMydon{
+	height: 100%;
+}
+.rankingDetailScore{
+	width: 90px;
+}
+.rankingDetailMore{
+	width: 56px;
+	height: 56px;
+	margin: 7px;
+}
+.rankingDetailMore *{
+	display: block;
+	width: 100%;
+	height: 100%;
+}
+.rankingDetailMore > a > div{
+	position: relative;
+	color: #ffffff;
+	top: -100%;
+	padding: 10% 0px;
+	height: 80%;
+}
+.rankingDetailMore > a > div > span{
+	height: 50%;
+	text-align: center;
+	line-height: 150%;
+}
+
+/**
+ * songList
+ */
+#songList{
+	margin: 3px;
+}
+#songList.scorelist{
+	margin: -5px 15px 15px 15px;
+}
+#songList .songNameArea {
+	min-height: 32px;
+	padding: 5px 0;
+	word-break: break-all;
+	}
+
+#songList .songNameArea span.songName {
+	display: inline-block;
+	vertical-align: middle;
+	padding: 0 0 0 36px;
+	width: auto;
+}
+#songList .closeAlert{
+	display: block;
+	text-align: center;
+	width: 100%;
+	font-size: 80%;
+	color:#fff;
+}
+#songList .ura .closeAlert{
+	padding-left: 36px;
+	text-align: left;
+}
+.ura { background: url("../../image/sp/640/icon_ura_640.png") no-repeat center left; }
+
+.name {
+	display:inline;
+	float:left;
+	/*width:80%;*/
+	width:100%;
+	}
+
+/**
+ * songList levelSelect
+ */
+.buttonArea.levelSelect {
+	height: 42px;
+	padding-top: 0;
+	}
+
+.levelSelect ul.buttonList > li {
+	display: inline-block;
+	float: none;
+/*	width: 32%; */
+    width: 24%;
+	padding: 0;
+	vertical-align: bottom;
+	}
+
+.levelSelect ul.buttonList > li > a {
+	display: block;
+	}
+
+.devil .levelSelect ul.buttonList > li {
+	position: relative;
+	display: inline-block;
+	width: 52px;
+/*	height: 42px;*/
+	}
+
+.levelSelect li > button {
+	padding: 5px;
+	width: 100%;
+	height: 42px;
+	}
+
+.levelSelect li > button > span {
+	position: relative;
+	display: inline-block;
+	height: 32px;
+	}
+
+/**
+ * recent_score
+ */
+#recentScoreList{
+	background: #FF5B14;
+	margin: 0px auto;
+	padding: 0px 10px;
+}
+#recentScoreList .scoreUser{
+	padding: 10px 0px;
+}
+#recentScoreList img.tweetButton,div.tsubuyaku{
+	width: 100%;
+	height: 100%;
+	line-height: 32px;
+}
+#recentScoreList div.tsubuyaku{
+	position: relative;
+	top: -48px;
+	font-size: 70%;
+	display: block;
+	text-align: center;
+}
+#recentScoreList .scoreElement{
+	background:#FFFBFB;
+	float:left;
+	width: 48%;
+	margin: 1%;
+}
+#recentScoreList img.levelIcon{
+	float: left;
+	height: 26px;
+/*	width: auto;*/
+	margin: 4px 0px 0px 3px;
+}
+#recentScoreList img.crownIcon{
+	float: left;
+	height: 35px;
+/*	width: auto;*/
+	margin: -1px 0px 0px 0px;
+}
+#recentScoreList .scoreScore{
+	float:right;
+	font-weight:bold;
+	height:100%;
+	font-size: 22px;
+	line-height: 35px;
+	padding-right: 2px;
+}
+#recentScoreList .playDataText{
+	float:left;
+	width:60%;
+	text-align:left;
+}
+#recentScoreList .playDataScore{
+	float:left;
+	width:40%;
+	text-align:right;
+}
+#recentScoreList .scoreDetailArea{
+	padding: 2px;
+	background:#EAB231;
+}
+#recentScoreList .scoreDataArea{
+	overflow: hidden;
+}
+
+img.score_name{
+	height: 20px;
+	margin: 1px;
+	display: block;
+}
+
+img.score_name2{
+	height: 19px;
+	margin: 1px;
+	display: block;
+}
+
+/* area_select */
+.area_select_area{
+	padding: 5%;
+	width: 90%;
+	float: left;
+}
+#ranking_kind{
+	width: 100%;
+}
+
+/* score_tab */
+#tabMenu{
+	overflow: hidden;
+	height:32px;
+}
+#tabMenu .tabimg{
+	width:100%;
+	display: block;
+}
+.scoretabArea a,
+.scoretabArea{
+	color: #FFFFFF;
+}
+.scoretabArea{
+	position: relative;
+	top: -39px;
+	display: block;
+	width: 100%;
+	height: 100%;
+	float: left;
+}
+.scoretab{
+	display: block;
+	float: left;
+	text-align: center;
+	width: 25%;
+	line-height: 34px;
+	height: 100%;
+}
+
+.scoretab > a{
+	display: block;
+	height: 100%;
+	width: 100%;
+	float: left;
+	overflow: hidden;
+}
+
+/* mode_switch */
+#modeSwitchArea{
+	width: 70%;
+	height: 37px;
+	padding: 0px;
+	margin: 10px auto;
+	overflow: hidden;
+}
+#modeSwitchArea img{
+	width: 100%;
+}
+#modeSwitchArea ul{
+	display: block;
+	width: 100%;
+	height: 100%;
+	overflow: hidden;
+}
+#modeSwitchArea li{
+	display: block;
+	width: 50%;
+	height: 100%;
+	float: left;
+}
+#modeSwitchArea a{
+	display: block;
+	height: 100%;
+	width: 100%;
+}
+#modeSwitchArea .sw_select{
+	display: block;
+}
+img.shin_title{
+	display: block;
+	width: 90%;
+	margin: 0px auto;
+}
+#modeSwitchArea img.brankimg{
+	width: 100%;
+	height: 100%;
+}
+/* score_detail */
+.scoreDetailMydonImage{
+	float: left;
+	margin-left: 5px;
+}
+.scoreDetailStatus{
+	background: #ffb500;
+	float: left;
+	width: 60%;
+	margin: 15px 5px 0px 5px;
+}
+.scoreDetailStatus > .mydon_name{
+	width: 90%;
+	float: left;
+	margin: -16px 5% 0px 5%;
+	height: 36px;
+	text-align: center;
+}
+.scoreDetailStatus > .mydon_name > .mydon_name_back{
+	width: 100%;
+}
+.scoreDetailStatus > .mydon_name > .mydon_name_image{
+	height: 20px;
+	position: relative;
+	top: -33px;
+}
+.scoreDetailStatus > .level,
+.scoreDetailStatus > .crown,
+.scoreDetailStatus > .best_score_icon,
+.scoreDetailStatus > .score{
+	height: 36px;
+}
+.scoreDetailStatus > .level{
+	margin-left: 8px;
+}
+.scoreDetailStatus > .crown{
+	margin-left: 5px;
+}
+.scoreDetailStatus > .best_score_icon{
+	margin-left: 5px;
+}
+.scoreDetailTable{
+	border: 5px #ffffff solid;
+	clear: both;
+	background: #ffb500;
+	margin: 10px 0px 15px 0px;
+	float: left;
+}
+.scoreDetailTable > .shin_icon{
+	margin: 0px auto;
+	display: block;
+	height: 30px;
+	position: relative;
+	top: -15px;
+	margin-bottom: -15px;
+}
+.scoreDetailTable > div{
+	float: left;
+}
+.scoreDetailTable > .error{
+	width: 96%;
+	margin: 0px 2%;
+}
+.scoreDetailTable > .ranking    > span,
+.scoreDetailTable > .high_score > span{
+	display: block;
+	position: relative;
+	text-align: right;
+	top: -21px;
+	padding-right: 5px;
+	line-height: 24px;
+}
+.scoreDetailTable > .section_lavel,
+.scoreDetailTable > .section_crown,
+.scoreDetailTable > .ranking,
+.scoreDetailTable > .high_score{
+	height: 45px;
+	margin: 1%;
+	margin-top: 10px;
+}
+.scoreDetailTable > .section_lavel { width: 80px; }
+.scoreDetailTable > .section_lavel > span{
+	margin-left: 13px;
+    font-size: 18px;
+    bottom: -7px;
+    position: relative;
+}
+.scoreDetailTable > .section_crown { width: 44px; text-align: center;}
+.scoreDetailTable > .section_crown > img{ width: 45px; }
+.scoreDetailTable > .ranking   { width: 45%; }
+.scoreDetailTable > .high_score{ width: 51%; }
+.scoreDetailTable > .high_score > img,
+.scoreDetailTable > .ranking    > img{ width: 100%;}
+.scoreDetailTable > .ranking > span{
+	top: -30px;
+	padding-right: 15px;
+}
+.scoreDetailTable > .high_score > span{
+	top: -45px;
+	padding-right: 10px;
+	color: #ffffff;
+	font-size: 160%;
+	line-height: 40px;
+}
+.scoreDetailTable > .good_cnt,
+.scoreDetailTable > .ok_cnt,
+.scoreDetailTable > .ng_cnt,
+.scoreDetailTable > .pound_cnt,
+.scoreDetailTable > .combo_cnt,
+.scoreDetailTable > .clear_cnt,
+.scoreDetailTable > .stage_cnt,
+.scoreDetailTable > .full_combo_cnt,
+.scoreDetailTable > .dondaful_combo_cnt{
+	background: #ffffff;
+}
+.scoreDetailTable > .good_cnt,
+.scoreDetailTable > .ok_cnt,
+.scoreDetailTable > .ng_cnt,
+.scoreDetailTable > .pound_cnt,
+.scoreDetailTable > .combo_cnt,
+.scoreDetailTable > .optionImage,
+.scoreDetailTable > .clear_cnt,
+.scoreDetailTable > .stage_cnt,
+.scoreDetailTable > .full_combo_cnt,
+.scoreDetailTable > .dondaful_combo_cnt{
+	width: 46%;
+	height: 22px;
+	margin: 2px 2%;
+}
+
+.scoreDetailTable > .clear_cnt,
+.scoreDetailTable > .stage_cnt,
+.scoreDetailTable > .full_combo_cnt,
+.scoreDetailTable > .dondaful_combo_cnt{
+	width: 46%;
+	height: 22px;
+	margin: 2px 2%;
+}
+
+
+.scoreDetailTable > .good_cnt  > img,
+.scoreDetailTable > .ok_cnt    > img,
+.scoreDetailTable > .ng_cnt    > img,
+.scoreDetailTable > .combo_cnt > img,
+.scoreDetailTable > .pound_cnt > img,
+.scoreDetailTable > .clear_cnt      > img,
+.scoreDetailTable > .stage_cnt      > img,
+.scoreDetailTable > .full_combo_cnt > img,
+.scoreDetailTable > .dondaful_combo_cnt > img{
+
+/*	height: 100%;*/
+	height: 18px;
+	margin: 2px;
+	float: left;
+}
+.scoreDetailTable > .good_cnt       > span,
+.scoreDetailTable > .ok_cnt         > span,
+.scoreDetailTable > .ng_cnt         > span,
+.scoreDetailTable > .combo_cnt      > span,
+.scoreDetailTable > .pound_cnt      > span,
+.scoreDetailTable > .clear_cnt      > span,
+.scoreDetailTable > .stage_cnt      > span,
+.scoreDetailTable > .full_combo_cnt > span,
+.scoreDetailTable > .dondaful_combo_cnt > span{
+	float: right;
+	text-align: right;
+	margin-top: 1px;
+	margin-right: 2px;
+}
+.scoreDetailTable > .good_cnt  > span,
+.scoreDetailTable > .ok_cnt    > span,
+.scoreDetailTable > .ng_cnt    > span,
+.scoreDetailTable > .combo_cnt > span,
+.scoreDetailTable > .pound_cnt > span{
+	height: 100%;
+	width: 40%;
+	margin-top: 1px;
+}
+.scoreDetailTable > .optionImage > img{
+	height: 93%;
+}
+#rankingSelect{
+	text-align: center;
+}
+#rankingSelect > img{
+	width: 100%;
+}
+#rankingSelect > select{
+	width: 90%;
+	position: relative;
+	top: -45px;
+}

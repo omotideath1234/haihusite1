@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+<!-- saved from url=(0038)https://donderhiroba.jp/score_list.php -->
+<html lang="ja"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+
+<title>ドンだーひろば</title>
+<meta name="viewport" id="viewport" content="width=device-width,initial-scale=1.0,minimum-scale=1.0,maximum-scale=1.0,user-scalable=0">
+<meta name="format-detection" content="telephone=no">
+<link rel="apple-touch-icon-precomposed" href="https://donderhiroba.jp/image/sp/640/don_640.png">
+<link rel="stylesheet" href="./haihu_files/style.css">
+
+<link href="./haihu_files/score.css" media="screen" rel="stylesheet" type="text/css">
+<link href="./haihu_files/song_list.css" media="screen" rel="stylesheet" type="text/css"><script async="" src="./haihu_files/analytics.js.ダウンロード"></script><script src="./haihu_files/jquery-1.12.4.min.js.ダウンロード"></script>
+<script type="text/javascript" src="./haihu_files/common.js.ダウンロード"></script>
+<script type="text/javascript" src="./haihu_files/score.js.ダウンロード"></script>
+<script type="text/javascript" src="./haihu_files/update.js.ダウンロード"></script>
+<script type="text/javascript" src="./haihu_files/jquery.cookie.js.ダウンロード"></script>
+<script type="text/javascript">
+    //<!--
+    jQuery(function($){
+	$( '#renew' ).find( 'a[id="ScoreUpdate"]' ).UpdateScore();
+});
+    //-->
+</script>
+<script type="text/javascript">
+    //<!--
+    
+jQuery(function($){
+	$.extend({
+		/* 2つの値を比較して、最小値を返す */
+		min: function(a, b) { return a < b ? a : b; },
+		/* 2つの値を比較して、最大値を返す */
+		max: function(a, b) { return a > b ? a : b; }
+	});
+	$.fn.heightset = function(){
+		$( this ).each(function(){
+			var _a = $( this ).find( 'div.songNameArea' ).height();
+			var _b = $( this ).find( 'span.songName' ).height();
+			if ( _a > _b ) {
+				$( this ).find( 'span.songName' ).css( 'line-height', _a + 'px' );
+			}
+		});
+	}
+	$( '#songList > li' ).heightset();
+
+	var pn = location.search.match(/(\?|&)tab=(\d+)(&|\b)/)?RegExp.$2:'0';
+});
+
+
+
+function make_detale_str(url, song_no, level, rank, taiko_no, genre){
+
+		var str = "?song_no="+ song_no +"&level="+ level + "&rank=" + rank;
+
+	if(rank==2){
+		pull_val = document.getElementById("ranking_kind").value;
+		area_id = pull_val.substr(1); 
+
+		str = str + "&area=" + area_id;
+
+	}
+
+	str = str + "&taiko_no=" + taiko_no + "&genre=" + genre;
+
+	url.href = url.href + str;
+
+}
+
+    //-->
+</script><script>(function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){ (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m) })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');ga('create', 'UA-37143471-1', 'auto');ga('set', 'dimension1', '49791fa44ccd5544d6fcb5d85c07376e');ga('set', 'dimension2', '2');ga('set', 'dimension3', '39');ga('set', 'dimension4', '999ae1dab538dfadf651e222d19e35ef');ga('set', 'dimension5', 'nbgi_taiko'); ga('send', 'pageview');</script><!--[if lt IE 9]>
+<script src="http://ie7-js.googlecode.com/svn/version/2.1(beta4)/IE9.js"></script>
+<![endif]-->
+
+</head>
+<body style="background:#FF7F00;">
+<div id="container">
+	<header style="background-image:url(./haihu_files/menu_03_640.png);color:#ffffff;">
+		<h1>配布曲一覧</h1>
+		<ul class="left">
+			<li class="boxLink"><a id="headerHref" href="ドンだーひろば.html">
+			<img src="./haihu_files/menu_01_640.png"></a></li>
+		</ul>
+		<ul class="right">
+			<li id="renew" class="imageArea"><a href="javascript:void(0)" id="ScoreUpdate">
+			<img src="./haihu_files/menu_02_640.png" width="30" height="30" style="cursor:pointer;cursor:hand"></a></li>
+		</ul>
+	</header>
+
+	<div id="content" style="padding-bottom: 45px;">
+<input type="hidden" id="rank" value="99">
+<input type="hidden" id="_tckt" name="_tckt" value="018253659de86480b61b0f3050fc0292">
+<div id="category" style="width:300px;margin:10px auto;">
+<div style="height:25px;background-color:#FFF200;text-align:center;font-size:11px;padding-top:8px;margin-bottom:10px;">
+<span style="font-weight:bold;">[お知らせ]</span><a style="text-decoration: underline;" href="https://twitter.com/ND_MOTI">Twitter設立のお知らせ</a>
+</div>
+
+<div id="tabMenu">
+<img class="tabimg" src="./haihu_files/tab_10_640.png">
+<ul class="scoretabArea">
+<li class="scoretab">個人成績</li>
+</ul><!-- .tabMenu .ui-tabs-nav -->
+</div>
+
+
+<div style="background-color: #F84828;overflow: hidden;clear:both;">
+
+<ul class="tabList clearfix tabMenu" id="tabList">
+<img src="./haihu_files/genre_tab_new_jpop_on_640.png" alt=""></a></li>
+</ul>
+
+<ul id="songList" class="scorelist">
+
+<div id="tab-genre1" class="clearfix">
+
+
+<li class="contentBox songLisrAreajpop devil">
+<div class="songNameArea clearfix">
+<span class="songName songNameFontjpop">macrocosmos[？]</span>
+</div>
+<div class="buttonArea levelSelect">
+<ul class="buttonList">
+<li><img class="crown easyjpop" src="./haihu_files/easy-none.png"></a></li>
+<li><img class="crown normaljpop" src="./haihu_files/normal-none.png"></a></li>
+<li><img class="crown hardjpop" src="./haihu_files/hard-none.png"></a></li>
+
+<li><a href="https://ux.getuploader.com/sousakuhumennnnn/download/2"><img class="crown onijpop" src="./haihu_files/crown_button_jpop_4_none_640.png"></a></li>
+</div>
+</li>
+</div>
+</ul><!-- #songList -->
+</div>
+</div>
+<div style="width:300px;height:25px;margin:0 auto;">
+<img class="obiSubtitle" src="./haihu_files/obi_mine_640.png">
+</div>
+<div class="button_area clearfix" style="background:#ffcc00;margin: 0px auto;">
+	<div class="buttonParentArea bunkatsu_3" style="width:88px;">
+		<a href="https://www.youtube.com/channel/UCkF_09tXFbfP5HmwykBv0sA">
+		<img class="buttonImage" src="./ドンだーひろば_files/btn_r_02_640.png">
+		<div class="lableArea" style="top:10px;">
+			<div class="buttonLabel shadowLabel">YouTube</div>
+		</div>
+		</a>
+	</div>
+	<div class="buttonParentArea bunkatsu_3" style="width:88px;">
+		<a href="haihu.html">
+		<img class="buttonImage" src="./ドンだーひろば_files/btn_r_02_640.png">
+		<div class="lableArea" style="top:10px;">
+			<div class="buttonLabel shadowLabel">配布譜面</div>
+		</div>
+		</a>
+	</div>
+	<div class="buttonParentArea bunkatsu_3" style="width:88px;">
+		<a href="https://twitter.com/ND_MOTI">
+		<img class="buttonImage" src="./ドンだーひろば_files/btn_r_02_640.png">
+		<div class="lableArea" style="top:10px;">
+			<div class="buttonLabel shadowLabel">twitter</div>
+		</div>
+		</a>
+	</div>
+</div>
+</body></html>

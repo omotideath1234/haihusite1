@@ -1,0 +1,186 @@
+@CHARSET "UTF-8";
+
+/****************************************
+
+        1. Layout
+
+*****************************************/
+
+#category > ul {
+	padding: 0;
+}
+#category > ul > li {
+	margin: 0;
+	padding: 0;
+	width: 32%
+}
+#category > ul > li > a {
+	margin: 0;
+	padding: 5px 0;
+	width: 100%;
+	text-align: center;
+}
+img.crown {
+	width:50px;
+/*	height:42px;*/
+}
+.easyjpop {
+	background-size: contain;
+	background-image: url("../../image/sp/640/crown_button_jpop_1_none_640.png");
+}
+.normaljpop {
+	background-size: contain;
+	background-image: url("../../image/sp/640/crown_button_jpop_2_none_640.png");
+}
+.hardjpop {
+	background-size: contain;
+	background-image: url("../../image/sp/640/crown_button_jpop_3_none_640.png");
+}
+.onijpop {
+	background-size: contain;
+	background-image: url("../../image/sp/640/crown_button_jpop_4_none_640.png");
+}
+.oni_urajpop {
+	background-size: contain;
+	background-image: url("../../image/sp/640/crown_button_jpop_5_none_640.png");
+}
+.easyanime {
+	background-size: contain;
+	background-image: url("../../image/sp/640/crown_button_anime_1_none_640.png");
+}
+.normalanime {
+	background-size: contain;
+	background-image: url("../../image/sp/640/crown_button_anime_2_none_640.png");
+}
+.hardanime {
+	background-size: contain;
+	background-image: url("../../image/sp/640/crown_button_anime_3_none_640.png");
+}
+.onianime {
+	background-size: contain;
+	background-image: url("../../image/sp/640/crown_button_anime_4_none_640.png");
+}
+.oni_uraanime {
+	background-size: contain;
+	background-image: url("../../image/sp/640/crown_button_anime_5_none_640.png");
+}
+.easykids {
+	background-size: contain;
+	background-image: url("../../image/sp/640/crown_button_kids_1_none_640.png");
+}
+.normalkids {
+	background-size: contain;
+	background-image: url("../../image/sp/640/crown_button_kids_2_none_640.png");
+}
+.hardkids {
+	background-size: contain;
+	background-image: url("../../image/sp/640/crown_button_kids_3_none_640.png");
+}
+.onikids {
+	background-size: contain;
+	background-image: url("../../image/sp/640/crown_button_kids_4_none_640.png");
+}
+.oni_urakids {
+	background-size: contain;
+	background-image: url("../../image/sp/640/crown_button_kids_5_none_640.png");
+}
+.easyvocaloid {
+	background-size: contain;
+	background-image: url("../../image/sp/640/crown_button_vocaloid_1_none_640.png");
+}
+.normalvocaloid {
+	background-size: contain;
+	background-image: url("../../image/sp/640/crown_button_vocaloid_2_none_640.png");
+}
+.hardvocaloid {
+	background-size: contain;
+	background-image: url("../../image/sp/640/crown_button_vocaloid_3_none_640.png");
+}
+.onivocaloid {
+	background-size: contain;
+	background-image: url("../../image/sp/640/crown_button_vocaloid_4_none_640.png");
+}
+.oni_uravocaloid {
+	background-size: contain;
+	background-image: url("../../image/sp/640/crown_button_vocaloid_5_none_640.png");
+}
+.easyvariety {
+	background-size: contain;
+	background-image: url("../../image/sp/640/crown_button_variety_1_none_640.png");
+}
+.normalvariety {
+	background-size: contain;
+	background-image: url("../../image/sp/640/crown_button_variety_2_none_640.png");
+}
+.hardvariety {
+	background-size: contain;
+	background-image: url("../../image/sp/640/crown_button_variety_3_none_640.png");
+}
+.onivariety {
+	background-size: contain;
+	background-image: url("../../image/sp/640/crown_button_variety_4_none_640.png");
+}
+.oni_uravariety {
+	background-size: contain;
+	background-image: url("../../image/sp/640/crown_button_variety_5_none_640.png");
+}
+.easyclassic {
+	background-size: contain;
+	background-image: url("../../image/sp/640/crown_button_classic_1_none_640.png");
+}
+.normalclassic {
+	background-size: contain;
+	background-image: url("../../image/sp/640/crown_button_classic_2_none_640.png");
+}
+.hardclassic {
+	background-size: contain;
+	background-image: url("../../image/sp/640/crown_button_classic_3_none_640.png");
+}
+.oniclassic {
+	background-size: contain;
+	background-image: url("../../image/sp/640/crown_button_classic_4_none_640.png");
+}
+.oni_uraclassic {
+	background-size: contain;
+	background-image: url("../../image/sp/640/crown_button_classic_5_none_640.png");
+}
+.easygame {
+	background-size: contain;
+	background-image: url("../../image/sp/640/crown_button_game_1_none_640.png");
+}
+.normalgame {
+	background-size: contain;
+	background-image: url("../../image/sp/640/crown_button_game_2_none_640.png");
+}
+.hardgame {
+	background-size: contain;
+	background-image: url("../../image/sp/640/crown_button_game_3_none_640.png");
+}
+.onigame {
+	background-size: contain;
+	background-image: url("../../image/sp/640/crown_button_game_4_none_640.png");
+}
+.oni_uragame {
+	background-size: contain;
+	background-image: url("../../image/sp/640/crown_button_game_5_none_640.png");
+}
+.easynamco {
+	background-size: contain;
+	background-image: url("../../image/sp/640/crown_button_namco_1_none_640.png");
+}
+.normalnamco {
+	background-size: contain;
+	background-image: url("../../image/sp/640/crown_button_namco_2_none_640.png");
+}
+.hardnamco {
+	background-size: contain;
+	background-image: url("../../image/sp/640/crown_button_namco_3_none_640.png");
+}
+.oninamco {
+	background-size: contain;
+	background-image: url("../../image/sp/640/crown_button_namco_4_none_640.png");
+}
+.oni_uranamco {
+	background-size: contain;
+	background-image: url("../../image/sp/640/crown_button_namco_5_none_640.png");
+}

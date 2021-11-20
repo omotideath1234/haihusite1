@@ -1,0 +1,21 @@
+jQuery(function($){
+	/**
+	 * 都道府県プルダウンから遷移 
+	 */
+	$('#ranking_kind').change(function() {
+		var rank = $('#ranking_kind option:selected').val();
+		var url = $(this).attr('url');
+		if(rank.length > 1){
+			var area = rank.substring(1);
+			url = url + '&area='+area; // 各都道府県
+		}
+		location.href = url;
+	})
+	/**
+	 * 「ランキングページヘはこちらから」から遷移
+	 */
+	$('#rankingSelect select').change(function(){
+		var url = $(this).val();
+		if(url.length > 1) location.href = url; 
+	});
+});

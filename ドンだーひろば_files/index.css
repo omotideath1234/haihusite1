@@ -1,0 +1,82 @@
+@CHARSET "UTF-8";
+
+#oshirase {
+	text-align: center;
+	width:300px;
+	background:#0033ff;
+	background:-moz-linear-gradient(top, #0033ff, #000066);
+	background:-webkit-gradient(linear, left top, left bottom, from(#0033ff), to(#000066));
+	float:center;
+	margin:0px auto;
+	padding:10px 0px 10px 0px;
+}
+#oshirase h2{
+	padding:5px auto;
+	padding-bottom:5px;
+	color:#FFFFFF;
+	text-shadow: 1px 1px 1px #595757;
+}
+#oshirase ul{
+	width:280px;
+	margin:0 auto;
+	padding-left:2px;
+	background:#FFFFFF;
+}
+#oshirase li{
+	text-align:left;
+	padding-left:5px;
+}
+#oshirase li.link_error{
+	text-align:center;
+}
+#oshirase_2 {
+	text-align: center;
+	width:300px;
+	background:url(../../image/sp/640/login_top_news02_640.png) repeat;
+	float:center;
+	margin:0px auto;
+	padding:10px 0px 10px 0px;
+}
+#oshirase_2 h2{
+/*	background:#663399; */
+	padding:5px auto;
+	padding-bottom:5px;
+	color:#FFFFFF;
+	text-shadow: 1px 1px 1px #595757;
+}
+#oshirase_2 ul{
+	width:280px;
+	margin:0 auto;
+	padding-left:2px;
+	background:#FFFFFF;
+}
+#oshirase_2 li{
+	text-align:left;
+	padding-left:5px;
+}
+#oshirase_2 li.link_error{
+	text-align:center;
+}
+
+#ticker{
+	background: url(../../image/sp/640/top_19_640.png) repeat;
+	height: 56px;
+}
+
+#ticker ul {
+	padding: 5px;
+}
+
+div.mydon_button_area {
+	background-color:#FC0;
+	height: 50px;
+	margin: 0px auto;
+	margin-top: -7px;
+}
+
+#online_battle {
+	width:300px;
+	margin:0px auto;
+	padding: 15px 0 5px 0;
+	text-align: center;
+}
